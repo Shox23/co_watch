@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   components: [
@@ -10,7 +9,7 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   css: ["~/assets/styles/main.scss"],
-  modules: ["@nuxt/eslint", "@nuxtjs/storybook"],
+  modules: ["@nuxt/eslint", "@nuxt/storybook"],
   vite: {
     css: {
       preprocessorOptions: {
@@ -19,5 +18,9 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+  storybook: {
+    route: "http://localhost:6006",
+    port: 6006,
   },
 });
